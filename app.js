@@ -243,3 +243,32 @@ const calculateGrade = grade => {
     return generateLetterGrade(grade)
 }
 console.log('Exercise 10 Result:', calculateGrade(85));
+
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+const createUsername = (fname, lname) => {
+
+    //i think i will store it to the variable
+    const combined_name = `${fname}${lname}` //lol i almost loose my shit there i added space between fname and lname so the .length resulted to 14 and not 13
+    //and then use its individual index to get each character using a function only for this purpose
+    const get_the_first_3_letter = string => `${string[0]}${string[1]}${string[2]}`
+
+    return `${get_the_first_3_letter(fname)}${get_the_first_3_letter(lname)}${combined_name.length}`
+}
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
