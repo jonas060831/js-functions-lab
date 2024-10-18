@@ -16,7 +16,7 @@ const maxOfTwoNumbers = (x, y) => {
     }
   }
   
-  console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
 
 /*
 Exercise 2: isAdult()
@@ -33,3 +33,31 @@ Complete the exercise in the space below:
 const isAdult = (age) => age >= 18 ? 'Adult' : 'Minor'
 
 console.log('Exercise 2 Result:', isAdult(18));
+
+/*
+Exercise 3: isCharAVowel()
+
+Write a function named isCharAVowel that takes a single character as 
+an argument. It should return true if the character is a vowel and 
+false otherwise. For the purposes of this exercise, the character 
+y should not be considered a vowel.
+
+Example: isCharAVowel('a') should return true.
+
+Complete the exercise in the space below:
+*/
+
+const isCharAVowel = (char) => {
+
+    const condition = char === "a" || char === "A" ||
+                      char === "e" || char === "E" ||
+                      char === "i" || char === "I" ||
+                      char === "o" || char === "O" ||
+                      char === "u" || char === "U"
+
+    if(condition) return true
+
+    return false
+}
+
+console.log('Exercise 3 Result:', isCharAVowel("E"));
