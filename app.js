@@ -93,3 +93,34 @@ Complete the exercise in the space below:
 const greetUser = (name, time_of_day) => `Good ${time_of_day}, ${name}!`
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
+
+
+/*
+Exercise 6: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers 
+and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+
+const maxOfThree = (num1, num2, num3) => {
+
+    let arr = [num1, num2, num3]
+
+    //i created a value that holds a temporary largest number
+    let largest = -99999
+
+    //this looks like it have a time complexity of O(n)
+    for (let index = 0; index < arr.length; index++) {
+        //then on each iteration of the array i replace it if the current value of largest is smaller than the value of the current index
+
+        if (largest < arr[index]) largest = arr[index]
+    }
+    return largest
+    
+}
+
+console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
